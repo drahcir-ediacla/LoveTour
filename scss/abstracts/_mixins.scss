@@ -1,0 +1,188 @@
+@use './variables' as *;
+
+@mixin form-field{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dcdcdc;
+    color: #777;
+    font-size: 15px;
+    outline: none;
+    padding-left: 30px;
+}
+@mixin form-icon{
+    position: absolute;
+    color: #777;
+    padding: 0 5px;
+    top: 12px;
+    left: 5px;
+} 
+@mixin field-icon{
+    height: 50px;
+    border: 1px solid #dcdcdc;
+}
+@mixin btn{
+    display: inline-block;
+    color: #fff;
+    background: #198BCA;
+    height: 50px;
+    padding: 10px;    
+    width: 160px;
+    border-radius: 5px;
+    border: none;
+}
+@mixin section{
+    display: block;
+    margin-bottom: 150px;
+}
+@mixin title{
+    text-align: center;
+    margin-bottom: 50px;
+    h1{
+        margin-bottom: 56px;
+    }
+    h1:after{
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 3px;
+    width: 10%;
+    display: block;
+    margin: 28px auto;
+    background: #198BCA;
+    }
+    span{
+        color: #FF7757;
+        font-weight: bold;
+    }
+    
+}
+@mixin item-thumbnail{
+    .deal{
+        position: relative;
+        display: block;
+        width: 350px;
+        padding-bottom: 5px;
+        margin-bottom: 70px;
+        box-shadow: 0 0px 20px rgb(0 0 0 / 10%);
+        border-radius: 0 0 10px 10px;
+        .ribbon{
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            z-index: 2;
+            span{
+                position: absolute;
+                display: block;
+                width: 225px;
+                padding: 10px 0;
+                background-color: #FF7757;
+                box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+                color: #fff;
+                font-size: 18px;
+                text-shadow: 0 1px 1px rgb(0 0 0 / 20%);
+                text-align: center;
+                right: -25px;
+                top: 40px;
+                transform: rotate(-45deg);
+            }
+        }
+        .tour-img img{
+            width: 100%;
+            height: 300px;
+            border-radius: 10px 10px 0 0;
+        }
+        .tour-info{
+            display: block;
+            text-align: left;
+            margin-top: 19px;
+            padding: 0 10px;
+            .rate-price{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 19px;
+                h4{
+                    color: #198BCA;
+                }
+                i{
+                    color: #FFC107;
+                    font-size: 14px;
+                }
+            }
+            .guarantee{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 19px 0;
+            }
+        }
+    }
+}
+@mixin counter-format{
+    .counter-cell{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        align-items: center;
+        padding: 25px 25px 18px 25px;
+        gap: 25px;
+        color: $white;
+        .counter-icon{
+            width: 52px;
+            margin: auto 0px;
+            img{
+                width: 100%;
+            }
+        }
+        .counter-details{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .num{
+                font-family: $kanit;
+                font-size: 36px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+@mixin travel-blog{
+    .blog-thumb{
+        max-width: 369px;
+        margin: 0 12px 12px 12px;
+    }
+    .blog-image{
+        width: 369px;
+        img{
+            width: 100%;
+        }
+    }
+    .blog-info-1{
+        li{
+            display: inline-block;
+            margin-right: 20px;
+            padding: 20px 0;
+            i{
+                color: $secondarycolor;
+            }
+            small{
+                font-style: italic;
+            }
+        }
+    }
+    .blog-info-2{
+        h4{
+            font-weight: bold;
+            padding: 20px 0;
+            border-top: 1px dashed $fieldbordercolor;
+            border-bottom: 1px dashed $fieldbordercolor;
+        }
+    }
+}
+@mixin rating{
+    font-size: 14px;
+    color: $themecolor2;
+}

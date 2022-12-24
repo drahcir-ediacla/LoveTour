@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Love Tour Travel Agency | Sample Travel Website</title>
+</head>
+<body>
+    <div id="hero">
+        <div class="container">
+            <div class="navbar">
+                <img src="assets/images/logo-white.png" class="logo">
+                <div class="right-navbar">
+                    <div class="topright-navbar">
+                        <div class="contact-info">
+                            <small style="letter-spacing: 1px;">Phone #: +00 1234 567 or email us: <a href="#">lovetour@email.com</a></small>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-twitter"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-vimeo-v"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-google-plus-g"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btmright-navbar">
+                        <div class="menu">
+                            <ul>
+                                <li class="active">Home</li>
+                                <li>Tour</li>
+                                <li>Hotels</li>
+                                <li>About Us</li>
+                                <li>Contact Us</li>
+                            </ul>
+                        </div>
+                        <a class="book-now">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blur-bg">
+                <div class="banner-title">
+                    <h1>Discover Your Favorite Place with Us</h1>
+                    <p>Travel to the any corner of the world, without going around in circles</p>
+                    <input type="text" placeholder="Search..">
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="slider">
+                    <div id="btnPrev"><i class="fa-chevron-left"></i></div>
+                    <div class="preview">
+                        <img src="assets/images/bg1.jpg" class="active bgthumb">
+                        <img src="assets/images/bg2.jpg" class="bgthumb">
+                        <img src="assets/images/bg3.jpg" class="bgthumb">
+                        <img src="assets/images/bg4.jpg" class="bgthumb">
+                        <img src="assets/images/bg5.jpg" class="bgthumb">
+                    </div>
+                    <div id="btnNxt"><i class="fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!---------------------------------------- About Love Tour ----------------------------------------------------------------->
+ <section class="about-us">
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-6 left-col">
+            <div class="form">
+                <div class="find-place">
+                    <h3>Find a Places</h3>
+                </div>
+                <form class="form-body">
+                    <div class="field">
+                        <div class="icon"><i class="fa-solid fa-location-pin"></i></div>
+                        <select id="destination">
+                            <option>Your Destination...</option>
+                            <option>Argentina</option>
+                            <option>Brazil</option>
+                            <option>China</option>
+                            <option>Italy</option>
+                            <option>France</option>
+                            <option>Germany</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <div class="icon"><i class="fa-solid fa-calendar"></i></div>
+                        <input id="checkIn" type="datecheck" placeholder=" Check In">
+                    </div>
+                    <div class="field">
+                        <div class="icon"><i class="fa-solid fa-calendar"></i></div>
+                        <input id="checkOut" type="datecheck" placeholder=" Check Out">
+                    </div>
+                    <div class="field-1">
+                        <div class="field">
+                            <div class="icon"><i class="fa-solid fa-user"></i></div>
+                            <input id="Adult" type="number" placeholder=" Adult">
+                        </div>
+                        <div class="field">
+                            <div class="icon"><i class="fa-solid fa-user"></i></div>
+                            <input id="Children" type="number" placeholder=" Children">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                        <select id="packages">
+                            <option>Packages</option>
+                            <option>3 Days Package</option>
+                            <option>5 Days Package</option>
+                            <option>7 Days Package</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <button class="button">Check Availability</button>
+                        <button class="button" type="reset">Reset</button>
+                    </div>    
+                </form>
+            </div>
+        </div> 
+        <div class="col-sm-6 right-col">
+            <h3>About Love Tour</h3>
+            <h1>We genuinely care about making your travel experience as easy and enjoyable as we can.</h1>
+            <br>
+            <p>Top Travel Agencies and Tour Operators. We provide 793 excursions and vacations worldwide in total. 1532 customers have reviewed our services together, giving us an overall rating of 5 out of 5.
+                <br><br>
+                We have become better individuals and have gained a deeper understanding of life's purpose thanks to travel. Every time we travel, we gain a fresh perspective on the world.</p>
+                <div class="features">
+                    <div class="col-sm-6">
+                        <div class="feat4">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h4>Special Activities</h4>
+                        </div>
+                        <div class="feat4">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h4>Private Guide</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="feat4">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h4>Travel Arrangements</h4>
+                        </div>
+                        <div class="feat4">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h4>Location Manager</h4>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+ </section>
+ <!---------------------------------------- End About Love Tour ----------------------------------------------------------------->
+  <!---------------------------------------- Perfect Deals & Discounts ----------------------------------------------------------------->
+  <section class="perfect-deals">
+    <div class="container">
+        <div class="row-1">
+            <div class="title">
+                <h1>Perfect <span>Deals & Discounts</span></h1>
+                <p>We have become better people and have gained a deeper understanding of life's purpose<br>thanks to travel. Every time we travel, we gain a fresh perspective on the world.</p>
+            </div>
+        </div>
+        <div class="row-2 item-list">
+            <div class="deal">
+                <div class="ribbon">
+                    <span>40% OFF</span>
+                </div>
+                <div class="tour-img">
+                    <img src="assets/images/tour-img1.jpg">
+                </div>
+                <div class="tour-info">
+                    <h4>Your Gateway To Cheap Travel Starts with a Maldives Vacation Package</h4>
+                    <p>Hiking Tour | Stoke on Trent</p>
+                    <div class="rate-price">
+                        <div>
+                            <small>from</small>
+                            <h4>$395</h4>
+                        </div>
+                        <div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br>
+                            <x-small>9 Review(s)</x-small>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>&nbsp;7 Days</span>
+                    </div>
+                    <div class="guarantee">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Fully Refundable</small>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Free Cancellation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deal">
+                <div class="ribbon">
+                    <span>35% OFF</span>
+                </div>
+                <div class="tour-img">
+                    <img src="assets/images/tour-img2.jpg">
+                </div>
+                <div class="tour-info">
+                    <h4>Your Gateway To Cheap Travel Starts with a Maldives Vacation Package</h4>
+                    <p>Hiking Tour | Stoke on Trent</p>
+                    <div class="rate-price">
+                        <div>
+                            <small>from</small>
+                            <h4>$395</h4>
+                        </div>
+                        <div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br>
+                            <x-small>9 Review(s)</x-small>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>&nbsp;7 Days</span>
+                    </div>
+                    <div class="guarantee">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Fully Refundable</small>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Free Cancellation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deal">
+                <div class="ribbon">
+                    <span>25% OFF</span>
+                </div>
+                <div class="tour-img">
+                    <img src="assets/images/tour-img3.jpg">
+                </div>
+                <div class="tour-info">
+                    <h4>Your Gateway To Cheap Travel Starts with a Maldives Vacation Package</h4>
+                    <p>Hiking Tour | Stoke on Trent</p>
+                    <div class="rate-price">
+                        <div>
+                            <small>from</small>
+                            <h4>$395</h4>
+                        </div>
+                        <div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br>
+                            <x-small>9 Review(s)</x-small>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>&nbsp;7 Days</span>
+                    </div>
+                    <div class="guarantee">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Fully Refundable</small>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Free Cancellation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deal">
+                <div class="ribbon">
+                    <span>50% OFF</span>
+                </div>
+                <div class="tour-img">
+                    <img src="assets/images/tour-img4.jpg">
+                </div>
+                <div class="tour-info">
+                    <h4>Your Gateway To Cheap Travel Starts with a Maldives Vacation Package</h4>
+                    <p>Hiking Tour | Stoke on Trent</p>
+                    <div class="rate-price">
+                        <div>
+                            <small>from</small>
+                            <h4>$395</h4>
+                        </div>
+                        <div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br>
+                            <x-small>9 Review(s)</x-small>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>&nbsp;7 Days</span>
+                    </div>
+                    <div class="guarantee">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Fully Refundable</small>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Free Cancellation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deal">
+                <div class="ribbon">
+                    <span>40% OFF</span>
+                </div>
+                <div class="tour-img">
+                    <img src="assets/images/tour-img1.jpg">
+                </div>
+                <div class="tour-info">
+                    <h4>Your Gateway To Cheap Travel Starts with a Maldives Vacation Package</h4>
+                    <p>Hiking Tour | Stoke on Trent</p>
+                    <div class="rate-price">
+                        <div>
+                            <small>from</small>
+                            <h4>$395</h4>
+                        </div>
+                        <div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br>
+                            <x-small>9 Review(s)</x-small>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>&nbsp;7 Days</span>
+                    </div>
+                    <div class="guarantee">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Fully Refundable</small>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Free Cancellation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deal">
+                <div class="ribbon">
+                    <span>35% OFF</span>
+                </div>
+                <div class="tour-img">
+                    <img src="assets/images/tour-img2.jpg">
+                </div>
+                <div class="tour-info">
+                    <h4>Your Gateway To Cheap Travel Starts with a Maldives Vacation Package</h4>
+                    <p>Hiking Tour | Stoke on Trent</p>
+                    <div class="rate-price">
+                        <div>
+                            <small>from</small>
+                            <h4>$395</h4>
+                        </div>
+                        <div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br>
+                            <x-small>9 Review(s)</x-small>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>&nbsp;7 Days</span>
+                    </div>
+                    <div class="guarantee">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Fully Refundable</small>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Free Cancellation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deal">
+                <div class="ribbon">
+                    <span>25% OFF</span>
+                </div>
+                <div class="tour-img">
+                    <img src="assets/images/tour-img3.jpg">
+                </div>
+                <div class="tour-info">
+                    <h4>Your Gateway To Cheap Travel Starts with a Maldives Vacation Package</h4>
+                    <p>Hiking Tour | Stoke on Trent</p>
+                    <div class="rate-price">
+                        <div>
+                            <small>from</small>
+                            <h4>$395</h4>
+                        </div>
+                        <div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br>
+                            <x-small>9 Review(s)</x-small>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>&nbsp;7 Days</span>
+                    </div>
+                    <div class="guarantee">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Fully Refundable</small>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Free Cancellation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deal">
+                <div class="ribbon">
+                    <span>50% OFF</span>
+                </div>
+                <div class="tour-img">
+                    <img src="assets/images/tour-img4.jpg">
+                </div>
+                <div class="tour-info">
+                    <h4>Your Gateway To Cheap Travel Starts with a Maldives Vacation Package</h4>
+                    <p>Hiking Tour | Stoke on Trent</p>
+                    <div class="rate-price">
+                        <div>
+                            <small>from</small>
+                            <h4>$395</h4>
+                        </div>
+                        <div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <br>
+                            <x-small>9 Review(s)</x-small>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>&nbsp;7 Days</span>
+                    </div>
+                    <div class="guarantee">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Fully Refundable</small>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <small>&nbsp;Free Cancellation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  </section>
+  <!---------------------------------------- Perfect Deals & Discounts END ----------------------------------------------------------------->
+  <!---------------------------------------- HIGHLIGHTS ----------------------------------------------------------------->
+  <section class="highlights-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm highlights-content">
+                <h3><span>01</span> Travel</h3>
+                <p>Most people agree travelling is a good thing. People think it’s exciting, almost invigorating to travel. Travelling is the best way to learn new things, whether it be a new language or new culture because you’re experiencing it first hand instead of just reading or looking at pictures.
+                </p>
+            </div>
+            <div class="col-sm highlights-content">
+                <h3><span>02</span> Experience</h3>
+                <p>Travelling is one of the best ways to replenish your energy. It is also one of the best ways to leave behind a mundane, repetitive life. Visiting new places helps you realize that there is more to the world than what you have seen or experienced, and will ever be able to see in this short span of life.
+                </p>
+            </div>
+            <div class="col-sm highlights-content">
+                <h3><span>03</span> Fun</h3>
+                <p>Travelling provides adventure and adventure keeps us from growing old. As long as there is something to look forward to, the mind remains young and healthy. Adventure stimulates our imagination. It offers change and movement that are necessary to keep ourselves from getting bored.
+                </p>
+            </div>
+            <div class="col-sm highlights-content">
+                <h3><span>04</span> Relax</h3>
+                <p>Traveling promotes happiness and helps you take your mind off stressful situations. This leads to lower cortisol levels, making you feel more calm and content. “It also helps us reflect on our personal goals and interests,” This is why travel makes you happy and relax.
+                </p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!---------------------------------------- HIGHLIGHTS END----------------------------------------------------------------->
+  <!---------------------------------------- TOP DESTINATIONS ----------------------------------------------------------------->
+  <section class="top-destinations">
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h1><span>Top Destinations</span> In The World</h1>
+                <p>Travel has helped us to understand the meaning of life and it has helped us become better people. <br>Each time we travel, we see the world with new eyes.</p>
+            </div>
+        </div>
+        <div class="row-1">
+            <div class="col-left">
+                <div class="img-wrap-1">
+                    <div class="img-box">
+                        <div class="img-caption">
+                            <h4>Blue Lagoon, EL Nido</h4>
+                            <i class="fa-solid fa-location-dot"></i>
+                            &nbsp;<span>Palawan, Philippines</span>
+                        </div>
+                        <img src="assets/images/top-img1.jpg">
+                    </div>
+                    <div class="img-box">
+                        <div class="img-caption">
+                            <h4>Maldives Beach Resorts</h4>
+                            <i class="fa-solid fa-location-dot"></i>
+                            &nbsp;<span>Republic of Maldives</span>
+                        </div>
+                        <img src="assets/images/top-img2.jpg">
+                    </div>
+                </div>
+                <div class="img-wrap-2">
+                    <div class="img-box">
+                        <div class="img-caption">
+                            <h4>Eiffel Tower</h4>
+                            <i class="fa-solid fa-location-dot"></i>
+                            &nbsp;<span>Paris, France</span>
+                        </div>
+                        <img src="assets/images/top-img3.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="img-wrap-3">
+                    <div class="img-box">
+                        <div class="img-caption">
+                            <h4>Dubai City</h4>
+                            <i class="fa-solid fa-location-dot"></i>
+                            &nbsp;<span>United Arab Emirates</span>
+                        </div>
+                        <img src="assets/images/top-img4.jpg">
+                    </div>
+                </div>
+                <div class="img-wrap-4">
+                    <div class="img-box img-box4a">
+                        <div class="img-caption">
+                            <h4>The Merlion</h4>
+                            <i class="fa-solid fa-location-dot"></i>
+                            &nbsp;<span>Singapore</span>
+                        </div>
+                        <img src="assets/images/top-img5.jpg">
+                    </div>
+                    <div class="img-box img-box4b">
+                        <div class="img-caption">
+                            <h4>Aurora Borealis</h4>
+                            <i class="fa-solid fa-location-dot"></i>
+                            &nbsp;<span>Iceland</span>
+                        </div>
+                        <img src="assets/images/top-img6.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!---------------------------------------- TOP DESTINATIONS END ----------------------------------------------------------------->
+<!---------------------------------------- GO TRAVEL DISCOVER REMEMBER US ----------------------------------------------------------------->
+<section class="go-travel">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 left-col">
+                <div class="callback-img">
+                <img src="assets/images/go-travel-img.jpg">
+                </div>
+            </div>
+            <div class="col-lg-7 right-col">
+                <div class="callback-info">
+                    <div class="row-1">
+                        <h4>CALLBACK FOR MORE</h4>
+                        <h1>GO TRAVEL. DISCOVER. REMEMBER US!!</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Eaque adipiscing, luctus eleifend.</p>
+                    </div>
+                </div>
+                <div class="callback-counter">
+                    <div class="counter-cell">
+                        <div class="counter-icon">
+                            <img src="assets/images/callback-icon1.png">
+                        </div>
+                        <div class="counter-details">
+                            <span class="num" data-val="450">000</span>
+                            <span class="txt">Satisfied Clients</span>
+                        </div>
+                    </div>
+                    <div class="counter-cell">
+                        <div class="counter-icon">
+                            <img src="assets/images/callback-icon2.png">
+                        </div>
+                        <div class="counter-details">
+                            <span class="num" data-val="639">000</span>
+                            <span class="txt">Satisfied Clients</span>
+                        </div>
+                    </div>
+                    <div class="counter-cell">
+                        <div class="counter-icon">
+                            <img src="assets/images/callback-icon3.png">
+                        </div>
+                        <div class="counter-details">
+                            <span class="num" data-val="1050">000</span>
+                            <span class="txt">Satisfied Clients</span>
+                        </div>
+                    </div>
+                    <div class="counter-cell">
+                        <div class="counter-icon">
+                            <img src="assets/images/callback-icon4.png">
+                        </div>
+                        <div class="counter-details">
+                            <span class="num" data-val="1920">000</span>
+                            <span class="txt">Satisfied Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotline">
+                    <div class="hotline-icon">
+                        <img src="assets/images/phone-icon.png">
+                    </div>
+                    <div class="hotline-details">
+                        <h4>Our 24/7 Hotline Phone Services</h4>
+                        <h2>Call: 123-456-7890</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------------------------------------- GO TRAVEL DISCOVER REMEMBER US END ----------------------------------------------------------------->
+<!------------------------------------------------------- TRAVEL GUIDING ----------------------------------------------------------------->
+<section class="travel-guide">
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h1>Articles & Travel <span>Guiding</span></h1>
+                <p>Travel has helped us to understand the meaning of life and it has helped us become better <br>people. Each time we travel, we see the world with new eyes.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left-col">
+                <div class="blog-image">
+                    <img src="assets/images/blog-img1.jpg">
+                </div>
+                <div class="blog-info-1">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-calendar"></i>
+                            <small>4th Aug 2020</small>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-message"></i>
+                            <small>3</small>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-tag"></i>
+                            <small>Tour, Tourism, Travel</small>
+                        </li>
+                    </ul>
+                </div>
+                <div class="blog-info-2">
+                    <h4>The journey of a thousand miles begins with a single step.</h4>
+                    <p>Excited him now natural saw passage offices you minuter. At by asked being court hopes. Farther so friends am to detract. Forbade concern do private be. Offending residence but men engrossed shy.<br><br>
+                        One of the programs is Save Our I have personally in many of the programs mentioned on this site. We would’ve had so much regret if we didn’t take this opportunity. Now, each of these travel quotes fit the stories we’ve made.
+                    </p>
+                </div>
+                <div class="blog-author">
+                    <img src="assets/images/customer-1.png">
+                    <span>By - John Smith</span>
+                </div>
+            </div>
+            <div class="right-col">
+                    <div class="blog-thumb">
+                        <div class="blog-image">
+                            <img src="assets/images/blog-img2.jpg">
+                        </div>
+                        <div class="blog-info-1">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <small>4th Aug 2020</small>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-message"></i>
+                                    <small>3</small>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-tag"></i>
+                                    <small>Tour</small>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="blog-info-2">
+                            <h4>Dare to live the life you've always wanted</h4>
+                        </div>
+                    </div>
+                    <div class="blog-thumb">
+                        <div class="blog-image">
+                            <img src="assets/images/blog-img3.jpg">
+                        </div>
+                        <div class="blog-info-1">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <small>4th Aug 2020</small>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-message"></i>
+                                    <small>3</small>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-tag"></i>
+                                    <small>Tour</small>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="blog-info-2">
+                            <h4>Adventures are the best way to learn.</h4>
+                        </div>
+                    </div>
+                    <div class="blog-thumb">
+                        <div class="blog-image">
+                            <img src="assets/images/blog-img4.jpg">
+                        </div>
+                        <div class="blog-info-1">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <small>4th Aug 2020</small>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-message"></i>
+                                    <small>3</small>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-tag"></i>
+                                    <small>Tour</small>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="blog-info-2">
+                            <h4>In the end, we only regret the chances we didn’t take.</h4>
+                        </div>
+                    </div>
+                    <div class="blog-thumb">
+                        <div class="blog-image">
+                            <img src="assets/images/blog-img5.jpg">
+                        </div>
+                        <div class="blog-info-1">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <small>4th Aug 2020</small>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-message"></i>
+                                    <small>3</small>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-tag"></i>
+                                    <small>Tour</small>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="blog-info-2">
+                            <h4>My goal is to run out of pages in my passport.</h4>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!------------------------------------------------------- TRAVEL GUIDING END ----------------------------------------------------------------->
+<!------------------------------------------------------------ TESTIMONIALS ------------------------------------------------------------------>
+<section class="testimonials">
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h1><span>Testimonials</span> from our Customers </h1>
+                <p>20 years from now you will be more disappointed by the things that you didn’t do. <br>Stop regretting and start travelling, start throwing off the bowlines.</p>
+            </div>
+        </div>
+        <div class="row feedback">
+            <div class="feedback-box">
+                <img src="assets/images/customer-1.png">
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4>John Smith</h4>
+                <p>Journalist, HWO News</p>
+            </div>
+            <div class="feedback-box">
+                <img src="assets/images/customer-2.png">
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4>John Doe</h4>
+                <p>Accountant</p>
+            </div>
+            <div class="feedback-box">
+                <img src="assets/images/customer-3.png">
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4>Tamara Bellis</h4>
+                <p>Managing Director, JTH</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!------------------------------------------------------------ TESTIMONIALS END ------------------------------------------------------------------>
+<!------------------------------------------------------------ PARTNERS ------------------------------------------------------------------>
+<section class="partners">
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h1>Our <span>Partners</span></h1>
+                <p>20 years from now you will be more disappointed by the things that you didn’t do. <br>Stop regretting and start travelling, start throwing off the bowlines.</p>
+            </div>
+        </div>
+        <div class="partner-logo">
+            <div class="partner-col">
+                <img src="assets/images/delta.png">
+            </div>
+            <div class="partner-col">
+                <img src="assets/images/british-airways.png">
+            </div>
+            <div class="partner-col">
+                <img src="assets/images/boeing.png">
+            </div>
+            <div class="partner-col">
+                <img src="assets/images/air-asia.png">
+            </div>
+            <div class="partner-col">
+                <img src="assets/images/singapore-airline.png">
+            </div>
+        </div>
+    </div>
+</section>
+<!------------------------------------------------------------ PARTNERS END ------------------------------------------------------------------>
+<!------------------------------------------------------------ BANNER PROMO ------------------------------------------------------------------>
+<section class="banner-promo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-left">
+                <h2>25% OFF SALE</h2>
+                <h1>Best Holiday Packages For <br>HONEYMOON</h1>
+                <button class="button">Book Your Flight Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="col-sm-6 col-right">
+                <h2>24x7 Service Available</h2>
+                <h1>Call Now And Book Your Flight <br>For Your Next Destination</h1>
+                <button class="button">Call For Booking <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+<!------------------------------------------------------------ BANNER PROMO END ------------------------------------------------------------------>
+<!------------------------------------------------------------ FOOTER ------------------------------------------------------------------>
+<section class="footer">
+    <div class="container">
+        <div class="row-top">
+            <div class="col-1">
+                <img src="assets/images/logo-white.png" class="logo">
+                <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna</p>
+                <ul>
+                    <li><strong>PO Box:</strong> +47-252-254-2542</li>
+                    <li><strong>Location:</strong> Collins Street, sydney, Australia</li>
+                    <li><strong>Email:</strong> info@lovetour.com</li>
+                    <li><strong>Website:</strong> www.lovetour.com</li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <h4>Company</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Delivery Information</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Conditions</li>
+                    <li>Customer Service</li>
+                    <li>Return Policy</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h4>Services</h4>
+                <ul>
+                    <li>Payment</li>
+                    <li>Feedback</li>
+                    <li>Contact us</li>
+                    <li>Our Services</li>
+                    <li>FAQ</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h4>Contact Info</h4>
+                <p>Want to be notified when we launch a new template 
+                    or an update. Just sign up and we'll send you a 
+                    notification by email.</p>
+                <input type="text" placeholder="Enter Your Email">
+                <button class="button">Subscribe Now</button>
+            </div>
+        </div>
+        <div class="row-bottom">
+            <div class="copyrights">
+                <p>2022 LoveTour. All rights reserved.</p>
+            </div>
+            <div class="social-media">
+                <ul>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-pinterest"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Latest compiled JavaScript -->
+<script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>flatpickr("input[type=datecheck]", {});</script>
+
+</body>
+</html>
