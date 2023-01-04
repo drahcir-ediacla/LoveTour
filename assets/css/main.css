@@ -61,6 +61,143 @@ x-small {
   font-size: 12px;
 }
 
+#sticky-header {
+  position: fixed;
+  left: 0;
+  top: -100px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  opacity: 0;
+  transition: top 1s ease;
+  animation-name: fadeInDown;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
+  z-index: 999;
+}
+@media (max-width: 1350px) {
+  #sticky-header {
+    display: none;
+  }
+}
+#sticky-header .sticky-navbar {
+  display: flex;
+  height: 75px;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right {
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu {
+  height: 100%;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li {
+  position: relative;
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0 20px;
+  cursor: pointer;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li .fa {
+  margin-left: 3px;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li .dropdown {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 60px;
+  min-width: 250px;
+  height: auto;
+  visibility: hidden;
+  background: #fff;
+  font-size: 15px;
+  color: #555;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li .dropdown .dropdown-2 {
+  position: absolute;
+  display: block;
+  left: 100%;
+  top: 0;
+  right: auto;
+  min-width: 250px;
+  background: #fff;
+  height: auto;
+  color: #555;
+  transform: scaleY(0);
+  transform-origin: 0 50%;
+  visibility: hidden;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li .dropdown .submenu {
+  padding: 10px 20px;
+  border-bottom: 1px solid #dcdcdc;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li .dropdown .submenu i {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li .dropdown li:last-child {
+  border: 0;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li .submenu:hover .dropdown-2 {
+  transition: all 500ms ease;
+  transform: scale(1, 1);
+  visibility: visible;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li.active {
+  background: linear-gradient(180deg, #198BCA 0%, rgba(25, 139, 202, 0.74) 100%);
+  color: #fff;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li:hover {
+  background: linear-gradient(180deg, #198BCA 0%, rgba(25, 139, 202, 0.74) 100%);
+  color: #fff;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li:hover .dropdown {
+  transition: all 500ms ease;
+  top: 50px;
+  visibility: visible;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .sticky-menu ul li:hover .dropdown {
+  transition: all 500ms ease;
+  top: 75px;
+  visibility: visible;
+}
+#sticky-header .sticky-navbar .sticky-navbar-right .book-now {
+  border: 1px solid #fff;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #198BCA;
+  background-color: #198BCA;
+}
+#sticky-header .sticky-navbar .sticky-navbar-left {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+}
+#sticky-header .sticky-navbar .sticky-navbar-left .logo img {
+  width: 200px;
+}
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -73,11 +210,11 @@ x-small {
   display: flex;
   justify-content: space-between;
   color: #fff;
-  padding: 0;
-  height: 75px;
+  padding: 10px 0 0 0;
+  height: 85px;
   z-index: 1;
 }
-#hero .navbar .logo {
+#hero .navbar .logo img {
   width: 200px;
 }
 #hero .navbar .right-navbar {
@@ -101,32 +238,109 @@ x-small {
 #hero .navbar .right-navbar .topright-navbar ul li:last-child {
   margin-right: 0;
 }
+@media (max-width: 1350px) {
+  #hero .navbar .right-navbar .topright-navbar {
+    display: none;
+  }
+}
 #hero .navbar .right-navbar .btmright-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-#hero .navbar .right-navbar .btmright-navbar .menu {
+#hero .navbar .right-navbar .btmright-navbar #burgerBtn {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+@media (max-width: 1350px) {
+  #hero .navbar .right-navbar .btmright-navbar #burgerBtn {
+    display: block;
+  }
+}
+#hero .navbar .right-navbar .btmright-navbar .main-menu {
+  height: 100%;
   height: 100%;
 }
-#hero .navbar .right-navbar .btmright-navbar .menu ul {
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-#hero .navbar .right-navbar .btmright-navbar .menu ul li {
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li {
+  position: relative;
   align-items: center;
   display: flex;
   margin: 0;
   padding: 0 20px;
   cursor: pointer;
 }
-#hero .navbar .right-navbar .btmright-navbar .menu ul li.active {
-  background: linear-gradient(180deg, #198BCA 0%, rgba(25, 139, 202, 0.74) 100%);
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li .fa {
+  margin-left: 3px;
 }
-#hero .navbar .right-navbar .btmright-navbar .menu ul li:hover {
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li .dropdown {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 60px;
+  min-width: 250px;
+  height: auto;
+  visibility: hidden;
+  background: #fff;
+  font-size: 15px;
+  color: #555;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li .dropdown .dropdown-2 {
+  position: absolute;
+  display: block;
+  left: 100%;
+  top: 0;
+  right: auto;
+  min-width: 250px;
+  background: #fff;
+  height: auto;
+  color: #555;
+  transform: scaleY(0);
+  transform-origin: 0 50%;
+  visibility: hidden;
+}
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li .dropdown .submenu {
+  padding: 10px 20px;
+  border-bottom: 1px solid #dcdcdc;
+}
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li .dropdown .submenu i {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li .dropdown li:last-child {
+  border: 0;
+}
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li .submenu:hover .dropdown-2 {
+  transition: all 500ms ease;
+  transform: scale(1, 1);
+  visibility: visible;
+}
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li.active {
   background: linear-gradient(180deg, #198BCA 0%, rgba(25, 139, 202, 0.74) 100%);
+  color: #fff;
+}
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li:hover {
+  background: linear-gradient(180deg, #198BCA 0%, rgba(25, 139, 202, 0.74) 100%);
+  color: #fff;
+}
+#hero .navbar .right-navbar .btmright-navbar .main-menu ul li:hover .dropdown {
+  transition: all 500ms ease;
+  top: 50px;
+  visibility: visible;
+}
+@media (max-width: 1350px) {
+  #hero .navbar .right-navbar .btmright-navbar .main-menu {
+    display: none;
+  }
 }
 #hero .navbar .right-navbar .btmright-navbar .book-now {
   border: 1px solid #fff;
@@ -134,11 +348,27 @@ x-small {
   display: flex;
   align-items: center;
   padding: 0 10px;
+  border-radius: 5px;
   cursor: pointer;
+}
+@media (max-width: 1350px) {
+  #hero .navbar .right-navbar .btmright-navbar .book-now {
+    display: none;
+  }
 }
 #hero .navbar .right-navbar .btmright-navbar .book-now:hover {
   background: linear-gradient(180deg, #198BCA 0%, rgba(25, 139, 202, 0.74) 100%);
   color: #fff;
+}
+@media (max-width: 1350px) {
+  #hero .navbar .right-navbar .btmright-navbar {
+    justify-content: right;
+  }
+}
+@media (max-width: 1620px) {
+  #hero .navbar {
+    padding: 10px 80px 0 80px;
+  }
 }
 #hero .blur-bg {
   width: 50%;
@@ -200,7 +430,8 @@ x-small {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 0 40px;
+  margin: 0 10px;
+  gap: 10px;
 }
 #hero .right-col .slider .preview .bgthumb {
   width: 80px;
@@ -227,6 +458,197 @@ x-small {
 }
 #hero .right-col .slider i:hover {
   opacity: 0.8;
+}
+@media (max-width: 1620px) {
+  #hero .right-col {
+    padding: 0 80px;
+  }
+}
+
+/*---------------------------------------------- HEADER END ---------------------------------------------------*/
+/*---------------------------------------------- MOBILE MENU ---------------------------------------------------*/
+#mobileMenu {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  padding-right: 30px;
+  max-width: 100%;
+  height: 100%;
+  z-index: 999999;
+  transition: 0.5s ease;
+}
+#mobileMenu #menuBkgrnd {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background: #2D2D2D;
+  z-index: 1;
+  transition: 0.5s ease;
+}
+#mobileMenu #menuBox {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 0px 0px;
+  opacity: 1;
+  overflow: scroll;
+  visibility: visible;
+  z-index: 1;
+}
+#mobileMenu #menuBox #closeBtn {
+  position: relative;
+  right: 0px;
+  top: 0px;
+  padding: 15px 15px 0px 15px;
+  border: none;
+  text-align: right;
+  font-size: 30px;
+  color: #555;
+  cursor: pointer;
+}
+#mobileMenu #menuBox .menu-logo {
+  position: relative;
+  padding: 15px 25px 90px 25px;
+  text-align: left;
+}
+#mobileMenu #menuBox .menu-logo img {
+  width: 225px;
+}
+#mobileMenu #menuBox .menu li {
+  position: relative;
+  border-top: 1px solid #dcdcdc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#mobileMenu #menuBox .menu li #tourSubmenu {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 0px 0px;
+  opacity: 1;
+  overflow: scroll;
+  visibility: visible;
+  z-index: 1;
+  position: fixed;
+  width: 300px;
+  right: -300px;
+  transition: 0.5s ease;
+}
+#mobileMenu #menuBox .menu li #tourSubmenu .row-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+#mobileMenu #menuBox .menu li #tourSubmenu .row-1 #tourClosebtn {
+  position: relative;
+  right: 0px;
+  top: 0px;
+  padding: 15px 15px 0px 15px;
+  border: none;
+  text-align: right;
+  font-size: 30px;
+  color: #555;
+  cursor: pointer;
+  padding: 0;
+}
+#mobileMenu #menuBox .menu li #hotelSubmenu {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 0px 0px;
+  opacity: 1;
+  overflow: scroll;
+  visibility: visible;
+  z-index: 1;
+  position: fixed;
+  width: 300px;
+  right: -300px;
+  transition: 0.5s ease;
+}
+#mobileMenu #menuBox .menu li #hotelSubmenu .row-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+#mobileMenu #menuBox .menu li #hotelSubmenu .row-1 #hotelClosebtn {
+  position: relative;
+  right: 0px;
+  top: 0px;
+  padding: 15px 15px 0px 15px;
+  border: none;
+  text-align: right;
+  font-size: 30px;
+  color: #555;
+  cursor: pointer;
+  padding: 0;
+}
+#mobileMenu #menuBox .menu li #pagesSubmenu {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 0px 0px;
+  opacity: 1;
+  overflow: scroll;
+  visibility: visible;
+  z-index: 1;
+  position: fixed;
+  width: 300px;
+  right: -300px;
+  transition: 0.5s ease;
+}
+#mobileMenu #menuBox .menu li #pagesSubmenu .row-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+#mobileMenu #menuBox .menu li #pagesSubmenu .row-1 #pagesClosebtn {
+  position: relative;
+  right: 0px;
+  top: 0px;
+  padding: 15px 15px 0px 15px;
+  border: none;
+  text-align: right;
+  font-size: 30px;
+  color: #555;
+  cursor: pointer;
+  padding: 0;
+}
+#mobileMenu #menuBox .menu .fa-angle-right {
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+#mobileMenu #menuBox .menu li:last-child {
+  border-bottom: 1px solid #dcdcdc;
+}
+#mobileMenu #menuBox .menu a {
+  position: relative;
+  display: block;
+  line-height: 24px;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
 }
 
 /*---------------------------------------------- ABOUT US ---------------------------------------------------*/
@@ -310,6 +732,7 @@ x-small {
   background: #198BCA;
   height: 50px;
   padding: 10px;
+  margin: 5px;
   width: 160px;
   border-radius: 5px;
   border: none;
@@ -845,10 +1268,12 @@ x-small {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .partners .partner-logo .partner-col {
   width: 266px;
+  margin-bottom: 30px;
+  padding: 0 20px;
 }
 .partners .partner-logo .partner-col img {
   width: 100%;
@@ -877,6 +1302,7 @@ x-small {
   background: #198BCA;
   height: 50px;
   padding: 10px;
+  margin: 5px;
   width: 160px;
   border-radius: 5px;
   border: none;
@@ -907,6 +1333,7 @@ x-small {
   background: #198BCA;
   height: 50px;
   padding: 10px;
+  margin: 5px;
   width: 160px;
   border-radius: 5px;
   border: none;
@@ -973,6 +1400,7 @@ x-small {
   background: #198BCA;
   height: 50px;
   padding: 10px;
+  margin: 5px;
   width: 160px;
   border-radius: 5px;
   border: none;
@@ -1002,4 +1430,26 @@ x-small {
 .footer li {
   display: block;
   margin-bottom: 16px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*--------------------------------------------- FOOTER END ----------------------------------------------------------------*/
+/*--------------------------------------------- SCROLL UP ARROW BUTTON ----------------------------------------------------------------*/
+#scroll-top {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  right: 15px;
+  font-size: 30px;
+  z-index: 99;
+  color: #fff;
+  background-color: #198BCA;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: 1s ease;
+}
+
+/*--------------------------------------------- SCROLL UP ARROW BUTTON END ----------------------------------------------------------------*//*# sourceMappingURL=main.css.map */

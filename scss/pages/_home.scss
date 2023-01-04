@@ -3,6 +3,66 @@
 
 
 //HEADER
+#sticky-header{
+    position: fixed;
+    left: 0;
+    top: -100px;
+    background-color: $white;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+    width: 100%;
+    opacity: 0;
+    transition: top 1s ease;
+    animation-name: fadeInDown;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+    z-index: 999;
+    @include mq(xl){
+        display: none;
+    }
+    .sticky-navbar{
+        display: flex;
+        height: 75px;
+        .sticky-navbar-right{
+            display: flex;
+            flex-basis: 50%;
+            align-items: center;
+            justify-content: space-between;
+            .sticky-menu{
+                @include menu;
+                ul{
+                    li:hover{
+                        .dropdown{
+                            transition: all 500ms ease;
+                            top: 75px;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            .book-now{
+                @include book-now-btn;
+                height: 40px;
+                padding: 0 10px;
+                border: 1px solid $primarycolor;
+                background-color: $primarycolor;
+            }
+        }
+        .sticky-navbar-left{    
+            flex-basis: 50%;
+            display: flex;
+            align-items: center;
+            .logo{
+                img{
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
 #hero{
     width: 100%;
     height: 100vh;
@@ -14,11 +74,13 @@
         display: flex;
         justify-content: space-between;
         color: $white;
-        padding: 0;
-        height: 75px;
+        padding: 10px 0 0 0;
+        height: 85px;
         z-index: 1;
         .logo{
-            width: 200px;
+            img{
+                width: 200px;
+            }
         }
         .right-navbar{
             display: flex;
@@ -41,48 +103,48 @@
                         margin-right: 0;
                     }
                 }
+                @include mq(xl){
+                    display: none;
+                }
             }
             .btmright-navbar{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 height: 100%;
-                .menu{
+                #burgerBtn{
+                    display: none;
+                    cursor: pointer;
+                    font-size: 30px;
+                    @include mq(xl){
+                        display: block;
+                    }
+                }
+                .main-menu{
                     height: 100%;
-                    ul{
-                        height: 100%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        li{
-                            align-items: center;
-                            display: flex;
-                            margin: 0;
-                            padding: 0 20px;
-                            cursor: pointer;
-                        }
-                        li.active{
-                            background: linear-gradient(180deg, #198BCA 0%, rgba(25, 139, 202, 0.74) 100%);
-                        }
-                        li:hover{
-                            background: linear-gradient(180deg, #198BCA 0%, rgba(25, 139, 202, 0.74) 100%);
-                        }
+                    @include menu;
+                    @include mq(xl){
+                        display: none;
                     }
                 }
                 .book-now{
-                    border: 1px solid #fff;
-                    height: 80%;
-                    display: flex;
-                    align-items: center;
-                    padding: 0 10px;
-                    cursor: pointer;
+                    @include book-now-btn;
+                    @include mq(xl){
+                        display: none;
+                    }
                 }
                 .book-now:hover{
                     background: linear-gradient(180deg, #198BCA 0%, rgba(25, 139, 202, 0.74) 100%);
                     color: #fff;
+                }
+                @include mq(xl){
+                    justify-content: right;
                 }    
             }
         }
-        
+        @include breakpoint(1620px){
+            padding: 10px 80px 0 80px;
+        }
     }
     .blur-bg{
         width: 50%;
@@ -143,7 +205,8 @@
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-                margin: 0 40px;
+                margin: 0 10px;
+                gap: 10px;
                 .bgthumb{
                     width: 80px;
                     margin: 0 10px;
@@ -173,8 +236,108 @@
             }
             
         }
+        @include breakpoint(1620px){
+            padding: 0 80px;
+        }
     }
     
+}
+/*---------------------------------------------- HEADER END ---------------------------------------------------*/
+/*---------------------------------------------- MOBILE MENU ---------------------------------------------------*/
+#mobileMenu{
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    padding-right: 30px;
+    max-width: 100%;
+    height: 100%;
+    z-index: 999999;
+    transition: 0.5s ease;
+    #menuBkgrnd{
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        background: $themecolor3;
+        z-index: 1;
+        transition: 0.5s ease;
+    }
+    #menuBox{
+        @include side-menu-container;
+        #closeBtn{
+            @include xbutton;
+        }
+        .menu-logo{
+            position: relative;
+            padding: 15px 25px 90px 25px;
+            text-align: left;
+            img{
+                width: 225px;
+            }
+        }
+        .menu{
+            li{
+                position: relative;
+                border-top: 1px solid $fieldbordercolor;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                #tourSubmenu{
+                    @include side-menu-container;
+                    @include mobile-submenu;
+                    .row-1{
+                        @include mobile-row-1;
+                        #tourClosebtn{
+                            @include xbutton;
+                            padding: 0;
+                        }
+                    }
+                }
+                #hotelSubmenu{
+                    @include side-menu-container;
+                    @include mobile-submenu;
+                    .row-1{
+                        @include mobile-row-1;
+                        #hotelClosebtn{
+                            @include xbutton;
+                            padding: 0;
+                        }
+                    }
+                }
+                #pagesSubmenu{
+                    @include side-menu-container;
+                    @include mobile-submenu;
+                    .row-1{
+                        @include mobile-row-1;
+                        #pagesClosebtn{
+                            @include xbutton;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+            .fa-angle-right{
+                width: 50px;
+                text-align: center;
+                cursor: pointer;
+            }
+            li:last-child{
+                border-bottom: 1px solid $fieldbordercolor;
+            }
+            a{
+                position: relative;
+                display: block;
+                line-height: 24px;
+                padding: 10px 15px;
+                font-size: 15px;
+                font-weight: 500;
+                color: $textcolor;
+            }
+        }
+    }
 }
 
 /*---------------------------------------------- ABOUT US ---------------------------------------------------*/
@@ -531,9 +694,11 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         .partner-col{
             width: 266px;
+            margin-bottom: 30px;
+            padding: 0 20px;
             img{
                 width: 100%;
                 cursor: pointer;
@@ -661,3 +826,23 @@
         margin-bottom: 16px;
     }
 }
+/*--------------------------------------------- FOOTER END ----------------------------------------------------------------*/
+/*--------------------------------------------- SCROLL UP ARROW BUTTON ----------------------------------------------------------------*/
+#scroll-top {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    right: 15px;
+    font-size: 30px;
+    z-index: 99;
+    color: #fff;
+    background-color: $primarycolor;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: 1s ease;
+}
+/*--------------------------------------------- SCROLL UP ARROW BUTTON END ----------------------------------------------------------------*/

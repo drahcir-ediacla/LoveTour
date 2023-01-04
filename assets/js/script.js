@@ -48,3 +48,186 @@ valueDisplays.forEach((valueDisplay) => {
     }
   }, duration);
 });
+
+// JS for Sticky Header  
+
+    // When the user scrolls down 80px from the top of the document, slide down the navbar
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("sticky-header").style.top = "0";
+        document.getElementById("sticky-header").style.opacity = "1";
+        document.getElementById("scroll-top").style.top = "90%";
+      } else {
+        document.getElementById("sticky-header").style.top = "-100px";        
+        document.getElementById("sticky-header").style.opacity = "0";
+        document.getElementById("scroll-top").style.top = "-10%"; 
+      }
+    }
+
+//  JS for Sticky Header End 
+// JS for Mobile Menu 
+
+var coll = document.getElementsByClassName("collapsible");
+var z;
+
+for (z = 0; z < coll.length; z++) {
+  coll[z].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+
+var menuBkgrnd = document.getElementById("menuBkgrnd");
+var mobileMenu = document.getElementById("mobileMenu");
+var tourSubmenu = document.getElementById("tourSubmenu");
+
+mobileMenu.style.right = "-300px";
+menuBkgrnd.style.right = "-100%";
+burgerBtn.onclick = function(){
+    if(mobileMenu.style.right == "-300px"){
+      mobileMenu.style.right = "0";
+    }
+    if(menuBkgrnd.style.right == "-100%"){
+       menuBkgrnd.style.right = "0";
+    }
+    else{
+        mobileMenu.style.right = "-100%";
+    }
+}
+mobileMenu.style.right = "-300px";
+menuBkgrnd.style.right = "-100%";
+closeBtn.onclick = function(){
+    if(mobileMenu.style.right == "0"){
+      mobileMenu.style.right = "-300px";
+    }
+    if(menuBkgrnd.style.right == "0"){
+       menuBkgrnd.style.right = "-100%";
+    }
+    else{
+        mobileMenu.style.right = "-300px";
+        menuBkgrnd.style.right = "-100%";
+    }
+}
+tourSubmenu.style.right = "-300px";
+tourArrow.onclick = function(){
+    if(tourSubmenu.style.right == "-300px"){
+      tourSubmenu.style.right = "0";
+    }
+    else{
+      tourSubmenu.style.right = "-300px";
+    }
+}
+mobileMenu.style.right = "-300px";
+tourSubmenu.style.right = "-300px";
+menuBkgrnd.style.right = "-100%";
+tourClosebtn.onclick = function(){
+    if(tourSubmenu.style.right == "-300px"){
+      tourSubmenu.style.right = "0";
+    }
+    if(mobileMenu.style.right == "-300px"){
+      mobileMenu.style.right = "0";
+    }
+    if(menuBkgrnd.style.right == "-100%"){
+      menuBkgrnd.style.right = "0";
+   }
+    else{
+        tourSubmenu.style.right = "-300px";
+        mobileMenu.style.right = "-300px";
+        menuBkgrnd.style.right = "-100%";
+    }
+}
+tourSubmenu.style.right = "-300px";
+tourBackbtn.onclick = function(){
+    if(tourSubmenu.style.right == "-300px"){
+      tourSubmenu.style.right = "0";
+    }
+    else{
+        tourSubmenu.style.right = "-300px";
+    }
+}
+
+hotelSubmenu.style.right = "-300px";
+hotelArrow.onclick = function(){
+    if(hotelSubmenu.style.right == "-300px"){
+      hotelSubmenu.style.right = "0";
+    }
+    else{
+      hotelSubmenu.style.right = "-300px";
+    }
+}
+mobileMenu.style.right = "-300px";
+hotelSubmenu.style.right = "-300px";
+menuBkgrnd.style.right = "-100%";
+hotelClosebtn.onclick = function(){
+    if(hotelSubmenu.style.right == "-300px"){
+      hotelSubmenu.style.right = "0";
+    }
+    if(mobileMenu.style.right == "-300px"){
+      mobileMenu.style.right = "0";
+    }
+    if(menuBkgrnd.style.right == "-100%"){
+      menuBkgrnd.style.right = "0";
+   }
+    else{
+        hotelSubmenu.style.right = "-300px";
+        mobileMenu.style.right = "-300px";
+        menuBkgrnd.style.right = "-100%";
+    }
+}
+hotelSubmenu.style.right = "-300px";
+hotelBackbtn.onclick = function(){
+    if(hotelSubmenu.style.right == "-300px"){
+      hotelSubmenu.style.right = "0";
+    }
+    else{
+      hotelSubmenu.style.right = "-300px";
+    }
+}
+
+pagesSubmenu.style.right = "-300px";
+pagesArrow.onclick = function(){
+    if(pagesSubmenu.style.right == "-300px"){
+      pagesSubmenu.style.right = "0";
+    }
+    else{
+      pagesSubmenu.style.right = "-300px";
+    }
+}
+mobileMenu.style.right = "-300px";
+pagesSubmenu.style.right = "-300px";
+menuBkgrnd.style.right = "-100%";
+pagesClosebtn.onclick = function(){
+    if(pagesSubmenu.style.right == "-300px"){
+      pagesSubmenu.style.right = "0";
+    }
+    if(mobileMenu.style.right == "-300px"){
+      mobileMenu.style.right = "0";
+    }
+    if(menuBkgrnd.style.right == "-100%"){
+      menuBkgrnd.style.right = "0";
+   }
+    else{
+        pagesSubmenu.style.right = "-300px";
+        mobileMenu.style.right = "-300px";
+        menuBkgrnd.style.right = "-100%";
+    }
+}
+pagesSubmenu.style.right = "-300px";
+pagesBackbtn.onclick = function(){
+    if(pagesSubmenu.style.right == "-300px"){
+      pagesSubmenu.style.right = "0";
+    }
+    else{
+      pagesSubmenu.style.right = "-300px";
+    }
+}
+
+//JS for Mobile Menu End
